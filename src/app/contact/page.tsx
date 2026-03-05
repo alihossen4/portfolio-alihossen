@@ -52,7 +52,7 @@ export default function Page() {
       </Head> */}
 
       <main className="container mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-center">Contact Me</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center my-20">Contact Me</h1>
 
         <div className="flex flex-col md:flex-row gap-12 justify-center items-start">
           
