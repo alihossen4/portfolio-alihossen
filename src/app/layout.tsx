@@ -5,8 +5,8 @@ import "./globals.css";
 import Image from "next/image";
 import logo from "../../public/Logo.png"
 import Link from "next/link";
-import { useEffect, useState } from "react";
-// import { usePathname } from "next/navigation";
+import { useEffect, useState} from "react";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,20 +17,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
 const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const ScrollHandler =() =>{
     const scroll = window.scrollY;
       setIsScroll(scroll>10);
-
   }
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    
+  }
   useEffect(()=>{
     window.addEventListener('scroll', ScrollHandler);
     return ()=> window.removeEventListener(
@@ -45,20 +47,20 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
         <header className={`flex w-full h-[100px] ${isScroll ? "bg-[#1A0B2E]" : ""} top-0 z-50 fixed`}>
   <div className="flex justify-between items-center max-w-[1320px] mx-auto px-4 w-full">
     
-    {/* Logo */}
+   
     <div className="logo">
       <Image src={logo} alt="logo" className="w-[35px] h-[39px]" />
     </div>
 
     {/* Desktop Menu */}
-    <div className="hidden md:flex space-x-8 text-[20px] plus-jakarta-sans">
+    <div className="hidden md:flex space-x-8 text-[20px] plus-jakarta-sans" >
       <Link href="/" className="hover:text-emerald-300">Home</Link>
       <Link href="/about" className="hover:text-emerald-300">About</Link>
       <Link href="/contact" className="hover:text-emerald-300">Contact</Link>
     </div>
 
-    {/* Mobile Toggle */}
-    <div className="md:hidden">
+    
+    <div className="md:hidden mobile-class">
       <button onClick={toggleMenu} aria-label="Toggle menu">
         {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </button>
@@ -67,13 +69,13 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   {/* Mobile Menu */}
   <div
-    className={`md:hidden absolute top-[100px] left-0 w-full bg-[#1A0B2E] flex flex-col items-center transition-transform duration-300 ${
-      isMenuOpen ? "translate-y-0" : "-translate-y-full"
+    className={`md:hidden absolute top-[0px] left-0 w-[60vw] bg-[#1A0B2E] flex flex-col items-center transition-transform duration-300 ${
+      isMenuOpen ? "translate-y-0" : "opacity-0"
     }`}
   >
-    <Link href="/" className="py-4 hover:text-emerald-300" onClick={() => setIsMenuOpen(false)}>Home</Link>
-    <Link href="/about" className="py-4 hover:text-emerald-300" onClick={() => setIsMenuOpen(false)}>About</Link>
-    <Link href="/contact" className="py-4 hover:text-emerald-300" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+    <Link href="/" className="py-4 hover:text-emerald-300" >Home</Link>
+    <Link href="/about" className="py-4 hover:text-emerald-300" >About</Link>
+    <Link href="/contact" className="py-4 hover:text-emerald-300">Contact</Link>
   </div>
 </header>
         {children}

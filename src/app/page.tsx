@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <>
       
-      <header className="container mx-auto px-4 md:px-6 mt-12 md:mt-16">
+      <header className="container mx-auto px-4 md:px-6 mt-12 md:mt-16 page-header">
         <div className="flex items-center gap-3 md:gap-6 mb-4">
           <Image src={Arrow} alt="arrow" className="w-6 h-6 md:w-8 md:h-8" />
           <p className="italic text-sm md:text-lg">Hello! I Am Ali Hossen</p>

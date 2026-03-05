@@ -107,6 +107,16 @@ border-radius: 80%;
   z-index: -10;
 }
 
-@media only screen and(max-width:768px) {
-  
+.menuBar{
+  display: none;
+  opacity:0;
+}
+@media only screen and (max-width:600px) {
+  .mobile-class{
+    display:block;
+    opacity:1;
+  }
+  .page-header{
+    @apply my-30
+  }
 }
