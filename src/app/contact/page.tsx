@@ -66,6 +66,7 @@ export default function Page() {
             >
               <label className="flex flex-col font-medium my-2 ">
                 Name
+              </label>
                 <input
                   type="text"
                   name="name"
@@ -73,11 +74,11 @@ export default function Page() {
                   value={name}
                   onChange={(e)=>setName(e.target.value)}
                   className="border p-4 py-5 mt-2 rounded focus:outline-none "
-                  required
+                  
                 />
-              </label>
               <label className="flex flex-col font-medium">
                 Email
+              </label>
                 <input
                   type="email"
                   name="email"
@@ -87,18 +88,17 @@ export default function Page() {
                   className="border  p-4 py-5 mt-2 rounded focus:outline-none "
                   required
                 />
-              </label>
               <label className="flex flex-col font-medium">
                 Message
+              </label>
                 <textarea
                   name="message"
                   placeholder="Your Message"
                   value={message}
                   onChange={(e)=>setMessage(e.target.value)}
                   className="border p-4 py-6 mt-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  required
+                  
                 />
-              </label>
               <button className="cursor-pointer bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition-colors"  >
                 Send Message
               </button>
