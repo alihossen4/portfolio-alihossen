@@ -31,12 +31,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex w-full h-[100px] bg-[#1A0B2E] top-0 fixed mb-50">
+        <header className="flex w-full h-[100px] bg-[#1A0B2E] top-0 fixed mb-50" >
           <div className="menubar flex max-w-[1320px] mx-auto justify-content space-x-150 my-auto">
 
           <div className="logo space-between ml-[-15px]">
@@ -48,12 +49,12 @@ export default function RootLayout({
              />
           </div>
           
-            <div className="menu text-[20px] [&>*+*]:ml-25 plus-jakarta-sans">
+            <div className="menu text-[20px] [&>*+*]:ml-25 plus-jakarta-sans " >
             
-              <Link href="/" >Home</Link>
-              <Link href="/about" >About</Link>
-              <Link href="/contact" >Contact</Link>
-          
+              <Link href="/" className="hover:text-emerald-300">Home</Link>
+              <Link href="/about" className="hover:text-emerald-300">About</Link>
+              <Link href="/contact" className="hover:text-emerald-300">Contact</Link>
+
              </div>
           </div>
         </header>

@@ -70,16 +70,6 @@ body {
   }
 }
 
-/* .header_image{
-  background: hsla(258, 80%, 29%, 1);
-  background: radial-gradient(circle, hsla(258, 80%, 29%, 1) 0%, hsla(271, 48%, 45%, 1) 100%);
-  background: -moz-radial-gradient(circle, hsla(258, 80%, 29%, 1) 0%, hsla(271, 48%, 45%, 1) 100%);
-  background: -webkit-radial-gradient(circle, hsla(258, 80%, 29%, 1) 0%, hsla(271, 48%, 45%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#320F85", endColorstr="#763CAC", GradientType=1 );
-  border-radius:50% ;
-  box-shadow: 50px 50px 150px rgb(50, 15, 133), ;
-  background-clip: var(--foreground);
-} */
 
 .image_gradient_me{
   background: hsl(0, 17%, 93%,1);
@@ -114,4 +104,8 @@ border-radius: 80%;
 }
 .exp{
   z-index: -10;
+}
+
+@media only screen and(max-width:1024px) {
+  
 }
