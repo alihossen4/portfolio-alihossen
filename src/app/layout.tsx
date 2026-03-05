@@ -27,7 +27,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const ScrollHandler =() =>{
     const scroll = window.scrollY;
-      setIsScroll(scroll>20);
+      setIsScroll(scroll>10);
 
   }
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
