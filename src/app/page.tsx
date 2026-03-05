@@ -33,81 +33,95 @@ export default function Home() {
 
 }, []);
 
-  const Cart = ({title, desc,children}:{title:string, desc:string, children:React.ReactNode}) =>{
-    return(
-      <>
-        <div className="w-[570px] h-[192px] flex bg-transparent p-3 cart border border-[#000] border-t-[3px] skills rounded-lg border m-2 border-t-[#693B93]">
-          <div className="img bg-transparent mr-12 my-auto ml-8">
-            {children}
-          </div>
-          <div className="desc m-2 mt-6 ">
-            <h2 className="text-[34px] uppercase">{title}</h2>
-            <p className="my-1">{desc}</p>
-            <button className={`bg-[#2C1250] border-[1px] border-[#693B93] p-2 rounded-xl px-3 cursor-pointer my-1`}>LEARN MORE</button>
-          </div>
-        </div>
-      </>
-    )
-  }
+ const Cart = ({
+  title,
+  desc,
+  children,
+}: {
+  title: string;
+  desc: string;
+  children: React.ReactNode;
+}) => {
   return (
-   <>
-    <header className="container mx-auto w-[1320px] montserrat mt-50">
-      <div className="flex ml-85 mt-25 mb-[-15px] ">
-        <Image src={Arrow} alt="arrow" className=""/>
-        <p className="italic text-[20px]">Hello! I Am Ali Hossen</p>
+    <div className="flex flex-col md:flex-row w-full md:w-[570px] bg-transparent p-3 border border-[#000] border-t-[3px] rounded-lg border-t-[#693B93] m-2 shadow-md">
+      <div className="flex justify-center md:justify-start items-center mb-4 md:mb-0 md:mr-6">
+        {children}
       </div>
-      <div className='mx-15 preahvihear-regular ml-45'>
-        <div className="left mx-auto inline-block header_image mr-10">
-          <Image src={Me} alt="me" className="image_gradient_me"/>
-        </div>
-        <div className="right inline-block mt-[-50px] h-50 w-150 ml-[60px]">
-          <p className="text-[20px] my-3">A Designer who Sometimes Judges the Cover</p>
-          <h1 className="text-[50px] leading-[55px]">Its not always true that don't Judges a book
-          by its <span className="text-[#7127BA]">cover</span>...</h1>
-          <p className="text-[20px] my-2">Because if the cover doesn't attract you others may can't impress you</p>
-        </div>
+      <div className="flex-1">
+        <h2 className="text-2xl md:text-3xl font-bold uppercase mb-2">{title}</h2>
+        <p className="mb-3 text-sm md:text-base">{desc}</p>
+        <button className="bg-[#2C1250] border-[1px] border-[#693B93] p-2 px-3 rounded-xl cursor-pointer text-sm md:text-base hover:bg-[#3a1962] transition-colors">
+          LEARN MORE
+        </button>
       </div>
-    </header>
-    <section className="">
-      <div>
-        <h1 className="container mx-auto ml-115 text-[6vh] title before::text-green-400 exp"><span className=" absolute slash">|</span>I'm a Web Developer...</h1>
-      </div>
-      <div className="container mx-auto w-[1320px]">
-          <p className="w-[80%] text-[22px] ml-38">Completed a Mern Stack Course from reputed institute, functioning in the industry for 3+ years now.
-            I make meaningful and delightful digital products that create an equilibrium
-            between user needs and business goals.</p>
-      </div>
-    </section>
+    </div>
+  );
+};
 
-    <section className="container mt-20 mx-auto w-[1320px] work_section mr-50">
-      <div className="inline-block mx-auto h-gradient"></div>
-      <h1 className="text-[40px] my-2">Work Skils</h1>
-      <div className="flex">
 
-        <div className="star">
-        <Cart  title="JavaScript" desc="I got core knowledge in javascript & and also javascript library like gsap" >
-          <Image src={star} alt="star" />
-        </Cart>
+  return (
+    <>
+      
+      <header className="container mx-auto px-4 md:px-6 mt-12 md:mt-16">
+        <div className="flex items-center gap-3 md:gap-6 mb-4">
+          <Image src={Arrow} alt="arrow" className="w-6 h-6 md:w-8 md:h-8" />
+          <p className="italic text-sm md:text-lg">Hello! I Am Ali Hossen</p>
         </div>
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12">
+          {/* Profile Image */}
+          <div className="w-36 h-36 md:w-48 md:h-48 relative rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
+            <Image src={Me} alt="me" layout="fill" objectFit="cover" className="rounded-full" />
+          </div>
+          
+          <div className="text-center md:text-left">
+            <p className="text-base md:text-lg mb-2">A pationate web developer</p>
+            <h1 className="text-2xl md:text-4xl font-bold leading-snug mb-2">
+              It&apos;s not always true that you don&apos;t judge a book by its
+              <span className="text-[#7127BA]">cover</span>...
+            </h1>
+            <p className="text-base md:text-lg">
+              
+            </p>
+          </div>
+        </div>
+      </header>
 
-        <div className="cup">
-        <Cart  title="mern stack" desc="Completed the the mern stack course from Creative It Institute" >
-          <Image src={cup} alt="cup" />
-        </Cart>
+     
+      <section className="container mx-auto px-4 md:px-6 mt-12 md:mt-16 text-center md:text-left">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 relative inline-block exp">
+          <span className="absolute left-0 text-green-400 exp">|</span> I&apos;m a Web Developer...
+        </h1>
+        <p className="text-base md:text-lg max-w-4xl mx-auto md:mx-0">
+          Completed a MERN Stack Course from a reputed institute, functioning in the industry for 2+ years now.
+          I make meaningful and delightful digital products that create an equilibrium
+          between user needs and business goals.
+        </p>
+      </section>
+
+      <section className="container mx-auto px-4 md:px-6 mt-12 md:mt-16">
+        <h1 className="text-2xl md:text-4xl font-semibold mb-6">Work Skills</h1>
+        <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center md:justify-start">
+          <Cart title="JavaScript" desc="I have core knowledge in JavaScript & libraries like GSAP">
+            <Image src={star} alt="star" width={50} height={50} />
+          </Cart>
+          <Cart title="MERN Stack" desc="Completed MERN Stack course from Creative IT Institute">
+            <Image src={cup} alt="cup" width={50} height={50} />
+          </Cart>
+          <Cart title="Next.js" desc="Learned Next.js to become an expert">
+            <Image src={light} alt="light" width={50} height={50} />
+          </Cart>
+          <Cart title="Backend" desc="Skills in Node.js, Express, MongoDB, Mongoose, TypeScript">
+            <Image src={drop} alt="drop" width={50} height={50} />
+          </Cart>
         </div>
-      </div>
-      <div className="flex">
-        <Cart  title="next js" desc="Learned nextjs to becomes expertise" >
-          <Image src={light} alt="star" />
-        </Cart>
-        <Cart  title="backend" desc="Got backend skills like nodejs, express, mongodb, mongoose, typescript" >
-          <Image src={drop} alt="drop" />
-        </Cart>
-      </div>
-    </section>
-    <section className="h-[754px] w-[895px] mx-auto my-20">
-      <h1 className="text-[30px] text-center">I'm currently looking to join a <span className="text-blue-500">cross-functional</span> team </h1>
-    </section>
-   </>
+      </section>
+
+      {/* Call to Action */}
+      <section className="container mx-auto px-4 md:px-6 mt-12 md:mt-20 text-center">
+        <h1 className="text-xl md:text-3xl font-semibold">
+          I'm currently looking to join a <span className="text-blue-500">cross-functional</span> team
+        </h1>
+      </section>
+    </>
   );
 }

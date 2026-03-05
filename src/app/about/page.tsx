@@ -27,7 +27,7 @@ export default function page() {
           <div className="flex-1">
             <h1 className="text-4xl font-bold mb-4">Hi, I'm - Md Ali Hossan</h1>
             <p className="text-lg mb-4">
-              I'm a passionate <strong>MERN stack developer</strong> with a creative approach to IT solutions.
+              I&apos;m a passionate <strong>MERN stack developer</strong> with a creative approach to IT solutions.
               I love building responsive and dynamic web applications using <strong>MongoDB, Express, React, and Node.js</strong>.
             </p>
             <p className="text-lg mb-4">
@@ -35,7 +35,7 @@ export default function page() {
               I enjoy turning ideas into functional applications and constantly learning new technologies to improve my craft.
             </p>
             <p className="text-lg">
-              When I'm not coding, I explore creative IT solutions, contribute to open-source, and experiment with new frameworks like <strong>Next.js</strong>.
+              When I&apos;m not coding, I explore creative IT solutions, contribute to open-source, and experiment with new frameworks like <strong>Next.js</strong>.
             </p>
           </div>
         </section>
