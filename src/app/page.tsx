@@ -1,14 +1,14 @@
 "use client"
 import { useEffect } from "react";
 import Image from "next/image";
-import Me from "../../public/Me.png"
-import Arrow from "../../public/Arrow.png"
+import Me from "@/public/Me.png"
+import Arrow from "@/public/Arrow.png"
 import {gsap} from "gsap";
 import SplitText from "gsap/SplitText";
-import cup from "../../public/cup.png"
-import drop from "../../public/drop.png"
-import star from "../../public/star.png"
-import light from "../../public/light.png"
+import cup from "@/public/cup.png"
+import drop from "@/public/drop.png"
+import star from "@/public/star.png"
+import light from "@/public/light.png"
 
 export default function Home() {
 
