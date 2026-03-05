@@ -27,7 +27,7 @@ export default function page() {
           <div className="flex-1">
             <h1 className="text-4xl font-bold mb-4">Hi, I'm - Md Ali Hossan</h1>
             <p className="text-lg mb-4">
-              I&apos;m a passionate <strong>MERN stack developer</strong> with a creative approach to IT solutions.
+              I&apos;m a passionate <strong>MERN stack developer</strong> with a course skill at <strong> creative it Institute.</strong>
               I love building responsive and dynamic web applications using <strong>MongoDB, Express, React, and Node.js</strong>.
             </p>
             <p className="text-lg mb-4">
@@ -35,12 +35,12 @@ export default function page() {
               I enjoy turning ideas into functional applications and constantly learning new technologies to improve my craft.
             </p>
             <p className="text-lg">
-              When I&apos;m not coding, I explore creative IT solutions, contribute to open-source, and experiment with new frameworks like <strong>Next.js</strong>.
+              When I&apos;m not coding, I explore problem solutions, contribute to open-source, and experiment with new frameworks like <strong>Next.js</strong>.
             </p>
           </div>
         </section>
 
-        {/* Skills Section */}
+        
         <section className="mt-12">
           <h2 className="text-3xl font-semibold mb-6">My Skills</h2>
           <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -55,7 +55,6 @@ export default function page() {
           </ul>
         </section>
 
-        {/* Recent Project Section */}
         <section className="mt-12">
           <h2 className="text-3xl font-semibold mb-6">Recent Project</h2>
           <div className="bg-gray-600 p-6 rounded shadow">

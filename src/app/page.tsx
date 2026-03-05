@@ -68,7 +68,7 @@ export default function Home() {
           <p className="italic text-sm md:text-lg">Hello! I Am Ali Hossen</p>
         </div>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12">
-          {/* Profile Image */}
+          
           <div className="w-36 h-36 md:w-48 md:h-48 relative rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
             <Image src={Me} alt="me" layout="fill" objectFit="cover" className="rounded-full" />
           </div>
@@ -86,7 +86,6 @@ export default function Home() {
         </div>
       </header>
 
-     
       <section className="container mx-auto px-4 md:px-6 mt-12 md:mt-16 text-center md:text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 relative inline-block exp">
           <span className="absolute left-0 text-green-400 exp">|</span> I&apos;m a Web Developer...
@@ -116,10 +115,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="container mx-auto px-4 md:px-6 mt-12 md:mt-20 text-center">
         <h1 className="text-xl md:text-3xl font-semibold">
-          I'm currently looking to join a <span className="text-blue-500">cross-functional</span> team
+          I&apos;m currently looking to join a <span className="text-blue-500">cross-functional</span> team
         </h1>
       </section>
     </>
