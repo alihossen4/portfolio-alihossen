@@ -2,7 +2,7 @@
 // import emailjs from "emailjs-com";
 import emailjs from "@emailjs/browser"
 import Link from "next/link";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent,  useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 type Email = {
   name: string,
@@ -55,8 +55,7 @@ export default function Page() {
           <div className="flex-1 max-w-150 mt-15">
             <form onSubmit={sendEmail}
               action="mailto:mdahossen.dev@gmail.com"
-              method="GET"
-              encType="text/plain"
+              method="POST"
               className="flex flex-col gap-4 "
               id="myForm"
             >
