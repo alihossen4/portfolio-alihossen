@@ -43,7 +43,7 @@ export default function Home() {
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex flex-col md:flex-row w-full md:w-[570px] bg-transparent p-3 border border-[#000] border-t-[3px] rounded-lg border-t-[#693B93] m-2 shadow-md">
+    <div className="flex flex-col md:flex-row w-full md:w-[570px] bg-transparent p-3 border border-[#000] border-t-[3px] rounded-lg border-t-[#693B93] m-2 shadow-md hover:scale-[1.1] cursor-pointer">
       <div className="flex justify-center md:justify-start items-center mb-4 md:mb-0 md:mr-6">
         {children}
       </div>
